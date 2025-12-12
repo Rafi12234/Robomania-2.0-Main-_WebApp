@@ -29,7 +29,7 @@ const SEGMENTS_DATA = [
   },
   {
     id: 2,
-    title: "Robo Soccer",
+    title: "Soccer Bot",
     subtitle: "Strategic Gameplay & Autonomous Control",
     description:
       "Join us in the Soccer Bot Challenge, where robotics and soccer meet. Teams will design and program autonomous robots that can kick a ball and score goals. Test your creativity and technical skills while competing to become the ultimate soccer bot champions.",
@@ -39,7 +39,7 @@ const SEGMENTS_DATA = [
   },
   {
     id: 3,
-    title: "CAD Odyssey",
+    title: "Cadyssey",
     subtitle: "3D Modeling & Engineering Design",
     description:
       "In the CAD Design segment, participants will create precise digital models of mechanical or electrical systems using CAD software. Ideal for those who want to sharpen their 3D design skills and gain a deeper understanding of engineering designs in the virtual space.",
@@ -59,7 +59,7 @@ const SEGMENTS_DATA = [
   },
   {
     id: 5,
-    title: "Hackathon",
+    title: "RoboProject Hackathon",
     subtitle: "Code, Innovate & Build Solutions",
     description:
       "The Mini Robotics Hackathon is a fast-paced event where participants will work on building mini robots under tight deadlines. With limited resources and time, this event challenges your problem-solving and quick-thinking abilities.",
@@ -69,23 +69,13 @@ const SEGMENTS_DATA = [
   },
   {
     id: 6,
-    title: "Innovators Arena",
+    title: "Robo Olympiad",
     subtitle: "Project Showcase & Innovation Display",
     description:
       "The Project Showcase gives participants the chance to display their innovative robotics projects. Whether it's an individual or team effort, this is the platform to showcase your creativity, design skills and problem-solving abilities to a wider audience.",
     imageUrl: "https://ik.imagekit.io/mekt2pafz/Innovatorsarena.png",
     
     icon: Trophy,
-  },
-  {
-    id: 7,
-    title: "AD Canvas",
-    subtitle: "Creative Design & Marketing Excellence",
-    description:
-      "The AD Canvas segment is a unique opportunity to explore the intersection of robotics and storytelling. Participants will design creative campaigns that use robotics to attract attention and engage audiences.",
-    imageUrl: "https://ik.imagekit.io/mekt2pafz/ADCanvas.png",
-    
-    icon: Zap,
   },
 ];
 

@@ -25,6 +25,7 @@ import CircuitWizardry from './Main_pages/segment_details/CircuitWizardry';
 import Cadyssey from './Main_pages/segment_details/Cadyssey';
 import RoboProjectHackathon from './Main_pages/segment_details/RoboProjectHackathon';
 import ADCanvas from './Main_pages/segment_details/ADCanvas';
+import RoboOlympiad from './Main_pages/segment_details/RoboOlympiad';
 function App() {
   return (
    <BrowserRouter>
@@ -50,6 +51,7 @@ function App() {
             <Route path="/segment/cadyssey" element={<Cadyssey />} />
             <Route path="/segment/roboproject-hackathon" element={<RoboProjectHackathon />} />
             <Route path="/segment/adcanvas" element={<ADCanvas />} />
+            <Route path="/segment/robo-olympiad" element={<RoboOlympiad />} />
           </Routes>
         </div>
         <Footer/>

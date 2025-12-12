@@ -6,6 +6,8 @@ import { useNavigate } from "react-router-dom";
 const SoccerBot = () => {
   const navigate = useNavigate();
 
+  const googleFormsLink = "https://forms.gle/ZDTYup7aJHRs1vHu5";
+
   const segment = {
     id: 1,
     name: "Soccer Bot Challenge",
@@ -210,7 +212,7 @@ const SoccerBot = () => {
                     <BookOpen className="h-4 w-4" />
                     Rule Book
                   </button>
-                  <button className="flex-1 rounded-xl bg-gradient-to-r from-[#1AB7AA] to-[#0fa399] px-4 py-2.5 text-sm font-semibold text-white hover:shadow-lg hover:shadow-[#1AB7AA]/50 transition-all duration-200 flex items-center justify-center gap-2">
+                  <button className="flex-1 rounded-xl bg-gradient-to-r from-[#1AB7AA] to-[#0fa399] px-4 py-2.5 text-sm font-semibold text-white hover:shadow-lg hover:shadow-[#1AB7AA]/50 transition-all duration-200 flex items-center justify-center gap-2" onClick={() => window.open(googleFormsLink, "_blank")}>
                     <UserPlus className="h-4 w-4" />
                     Enroll Now
                   </button>

@@ -27,7 +27,6 @@ const partnerOptions = [
 export default function Navbar(){
   const navItems = [
     { name: "Home", link: "/" },
-    { name: "Partners", link: "/partners/premier" },
     { name: "Segments", link: "/segments" },
     { name: "Our Gross Reach", link: "/our-gross-reach" },
     { name: "About Us", link: "/aboutus" },

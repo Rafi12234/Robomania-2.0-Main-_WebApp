@@ -29,18 +29,6 @@ const segmentsData = [
     rulebookLink: "#", // Update this with actual rulebook link
   },
   {
-    id: 3,
-    name: "Innovators' Arena",
-    slug: "innovators-arena",
-    badge: "Project Showcase",
-    category: "Research · Prototyping",
-    image: "https://ik.imagekit.io/mekt2pafz/Innovatorsarena.png",
-    schedule: "Day 2-3, 2:00 PM - 5:00 PM",
-    place: "Exhibition Hall, 1st Floor",
-    registrationDeadline: "Dec 20, 2025",
-    rulebookLink: "#", // Update this with actual rulebook link
-  },
-  {
     id: 4,
     name: "Circuit Wizardry",
     slug: "circuit-wizardry",
@@ -77,15 +65,17 @@ const segmentsData = [
     rulebookLink: "#", // Update this with actual rulebook link
   },
   {
-    id: 7,
-    name: "ADCanvas",
-    slug: "adcanvas",
-    badge: "Creative Tech + Marketing",
-    category: "Branding · Storytelling",
-    image: "https://ik.imagekit.io/mekt2pafz/ADCanvas.png",
-    schedule: "Day 2, 3:00 PM - 5:30 PM",
-    place: "Auditorium, Ground Floor",
+    id: 8,
+    name: "Robo Olympiad",
+    slug: "robo-olympiad",
+    badge: "Ultimate Robotics Challenge",
+    category: "Multi-Event Competition · Team Strategy",
+    image: "https://ik.imagekit.io/mekt2pafz/Robomania%202.0/robo%20olympiad.png?updatedAt=1765578419230",
+    schedule: "Day 3, 9:00 AM - 12:00 PM",
+    place: "TT Ground",
     registrationDeadline: "Dec 17, 2025",
+    prizePool: "20,000",
+    description: "An exciting multi-event robotics competition that challenges teams to excel across diverse robotic disciplines. Teams compete in various categories showcasing skills in automation, precision, and innovation. This ultimate robotics challenge brings together the best robotic talents for an unforgettable experience.",
     rulebookLink: "#", // Update this with actual rulebook link
   },
 ];
