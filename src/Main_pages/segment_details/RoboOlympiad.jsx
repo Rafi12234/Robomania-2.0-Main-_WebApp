@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { ChevronLeft, Trophy, Calendar, MapPin, Clock, Cpu, BookOpen, UserPlus } from "lucide-react";
+import { ChevronLeft, Trophy, Calendar, MapPin, Clock, Cpu, BookOpen, UserPlus, X } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const RoboOlympiad = () => {
   const navigate = useNavigate();
+  const [showComingSoon, setShowComingSoon] = useState(false);
 
   const googleFormsLink = "https://forms.gle/WToS83Q4pWZUTnUR7";
 
@@ -207,7 +208,7 @@ const RoboOlympiad = () => {
                   transition={{ delay: 0.24, duration: 0.35 }}
                   className="mt-6 flex flex-wrap gap-3 sm:gap-4"
                 >
-                  <button className="flex-1 rounded-xl border border-[#D1BA83]/60 bg-black/50 px-4 py-2.5 text-sm font-semibold text-[#D1BA83] hover:bg-[#D1BA83]/10 transition-colors duration-200 flex items-center justify-center gap-2">
+                  <button onClick={() => setShowComingSoon(true)} className="flex-1 rounded-xl border border-[#D1BA83]/60 bg-black/50 px-4 py-2.5 text-sm font-semibold text-[#D1BA83] hover:bg-[#D1BA83]/10 transition-colors duration-200 flex items-center justify-center gap-2">
                     <BookOpen className="h-4 w-4" />
                     Rule Book
                   </button>
@@ -268,6 +269,64 @@ const RoboOlympiad = () => {
             )}
           </div>
         </motion.div>
+
+        {/* Coming Soon Modal */}
+        {showComingSoon && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setShowComingSoon(false)}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4"
+          >
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0, y: 20 }}
+              animate={{ scale: 1, opacity: 1, y: 0 }}
+              exit={{ scale: 0.9, opacity: 0, y: 20 }}
+              transition={{ type: "spring", stiffness: 260, damping: 26 }}
+              onClick={(e) => e.stopPropagation()}
+              className="relative rounded-3xl border border-[#D1BA83]/60 bg-gradient-to-br from-[#050506]/95 via-[#0d0902]/95 to-[#1a0f00]/80 shadow-[0_0_70px_rgba(245,203,122,0.28)] p-8 max-w-md w-full text-center"
+            >
+              {/* Close button */}
+              <button
+                onClick={() => setShowComingSoon(false)}
+                className="absolute top-4 right-4 p-2 rounded-full hover:bg-[#D1BA83]/10 transition-colors duration-200"
+              >
+                <X className="h-5 w-5 text-[#D1BA83]" />
+              </button>
+
+              {/* Content */}
+              <div className="space-y-4">
+                <motion.div
+                  animate={{ y: [0, -10, 0] }}
+                  transition={{ duration: 2, repeat: Infinity }}
+                  className="text-5xl font-bold bg-gradient-to-r from-[#F5CB7A] via-[#1AB7AA] to-[#F5CB7A] bg-clip-text text-transparent"
+                >
+                  🎉
+                </motion.div>
+
+                <h2 className="text-3xl font-bold text-[#F5CB7A]">Coming Soon!</h2>
+
+                <p className="text-neutral-300 text-sm leading-relaxed">
+                  The rule book for this segment is being prepared with all the exciting details and guidelines.
+                </p>
+
+                <p className="text-neutral-400 text-xs">
+                  Check back soon for the complete ruleset and competition guidelines.
+                </p>
+
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={() => setShowComingSoon(false)}
+                  className="mt-6 w-full rounded-xl bg-gradient-to-r from-[#1AB7AA] to-[#0fa399] px-4 py-3 text-sm font-semibold text-white hover:shadow-lg hover:shadow-[#1AB7AA]/50 transition-all duration-200"
+                >
+                  Got it!
+                </motion.button>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
       </div>
     </section>
   );
