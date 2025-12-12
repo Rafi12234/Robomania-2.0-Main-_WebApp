@@ -17,7 +17,7 @@ const RoboOlympiad = () => {
     prizePool: "৳20,000",
     image: "https://ik.imagekit.io/mekt2pafz/Robomania%202.0/robo%20olympiad.png?updatedAt=1765578419230",
     tagline: "A multi-event robotics competition that challenges teams to excel across diverse robotic disciplines.",
-    detailedDescription: "Robo Olympiad is an exciting multi-event robotics competition that brings together the best robotic talents for an unforgettable experience. Teams face diverse challenges that test their understanding of mechanics, control systems, programming, and strategic thinking. The competition emphasizes innovation and team coordination, making it the ultimate platform for roboticists to prove their mettle.",
+    detailedDescription: "The Robot Olympiad is the knowledge-driven segment of Robomania 2.0, designed to test the intellectual depth, analytical thinking, and technical understanding of individuals passionate about robotics, automation, and artificial intelligence. This solo competition is crafted to evaluate not just what you know—but how you apply it. If you’re confident in your concepts, theories, and problem-solving skills, the Robot Olympiad is your arena.",
     highlights: [
       "Multiple events showcasing different robotics disciplines and skills.",
       "Emphasis on innovation, precision, and team coordination.",
