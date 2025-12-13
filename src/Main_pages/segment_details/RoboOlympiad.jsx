@@ -1,39 +1,38 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { ChevronLeft, Trophy, Users, Target, Cpu, BookOpen, UserPlus, Calendar, MapPin, Clock, X } from "lucide-react";
+import { ChevronLeft, Trophy, Calendar, MapPin, Clock, Cpu, BookOpen, UserPlus, X } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
-const LineFollowingRobot = () => {
+const RoboOlympiad = () => {
   const navigate = useNavigate();
   const [showComingSoon, setShowComingSoon] = useState(false);
 
-  const googleFormsLink = "https://forms.gle/vEK2PBbLqTMDodmX8";
+  const googleFormsLink = "https://forms.gle/WToS83Q4pWZUTnUR7";
 
   const segment = {
-    id: 2,
-    name: "Line Following Robot",
-    badge: "Core Robotics Skill",
-    category: "Embedded Systems · Control",
-    prizePool: "৳30,000+",
-    expectedTeams: "40+ teams",
-    difficulty: "Beginner – Intermediate",
-    image: "https://ik.imagekit.io/mekt2pafz/LineFollowingRobot.png",
-    tagline: "Master sensors, control logic and optimization in a classic robotics challenge.",
-    shortDescription: "Build a robot that can autonomously follow complex tracks with high speed and accuracy. Perfect for participants stepping into robotics or sharpening control skills.",
-    detailedDescription: "In the Line Following Robot challenge, participants design sensor arrays, tune motor drivers and implement control algorithms to track black/white paths and dynamic curves. Tracks may include sharp turns, lane splits and speed sections. This segment demonstrates fundamental automation principles and offers sponsors a strong connection to skill-building and learning-focused robotics.",
+    id: 8,
+    name: "Robo Olympiad",
+    badge: "Ultimate Robotics Challenge",
+    category: "Multi-Event Competition · Team Strategy",
+    prizePool: "৳20,000",
+    image: "https://ik.imagekit.io/mekt2pafz/Robomania%202.0/robo%20olympiad.png?updatedAt=1765578419230",
+    tagline: "A multi-event robotics competition that challenges teams to excel across diverse robotic disciplines.",
+    detailedDescription: "The Robot Olympiad is the knowledge-driven segment of Robomania 2.0, designed to test the intellectual depth, analytical thinking, and technical understanding of individuals passionate about robotics, automation, and artificial intelligence. This solo competition is crafted to evaluate not just what you know—but how you apply it. If you’re confident in your concepts, theories, and problem-solving skills, the Robot Olympiad is your arena.",
     highlights: [
-      "Multiple track difficulties: beginner, intermediate and pro lanes.",
-      "Focus on sensor tuning, PID control and hardware optimization.",
-      "Ideal gateway event for newcomers to robotics."
+      "Multiple events showcasing different robotics disciplines and skills.",
+      "Emphasis on innovation, precision, and team coordination.",
+      "Competitive environment with top teams recognized and awarded.",
+      "Opportunities for networking with fellow robotics enthusiasts."
     ],
-    schedule: "Day 1, 9:00 AM - 12:00 PM",
-    place: "Track B, Ground Floor",
-    registrationDeadline: "Dec 14, 2025"
+    schedule: "Day 3, 9:00 AM - 12:00 PM",
+    place: "TT Ground",
+    registrationDeadline: "Dec 17, 2025"
   };
 
   return (
     <section className="min-h-screen px-4 py-10 text-white md:py-16 bg-black">
       <div className="mx-auto max-w-7xl">
+        {/* Back button */}
         <motion.button
           whileHover={{ scale: 1.05, x: -4 }}
           whileTap={{ scale: 0.95 }}
@@ -44,6 +43,7 @@ const LineFollowingRobot = () => {
           Back
         </motion.button>
 
+        {/* Main content card */}
         <motion.div
           initial={{ scale: 0.95, opacity: 0, y: 20 }}
           animate={{ scale: 1, opacity: 1, y: 0 }}
@@ -52,9 +52,12 @@ const LineFollowingRobot = () => {
                      bg-gradient-to-br from-[#050506]/95 via-[#0d0902]/95 to-[#1a0f00]/80 
                      shadow-[0_0_70px_rgba(245,203,122,0.28)]"
         >
+          {/* Top accent line */}
           <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-[#F5CB7A] to-transparent opacity-80" />
 
+          {/* Content */}
           <div className="px-5 sm:px-8 pt-8 pb-8">
+            {/* Top row: badge + category */}
             <motion.div
               initial={{ opacity: 0, y: -6 }}
               animate={{ opacity: 1, y: 0 }}
@@ -79,7 +82,9 @@ const LineFollowingRobot = () => {
               )}
             </motion.div>
 
+            {/* Image + basic details side-by-side */}
             <div className="grid grid-cols-1 md:grid-cols-[minmax(0,1.1fr)_minmax(0,1.4fr)] gap-5 md:gap-7 items-start">
+              {/* Image card */}
               <motion.div
                 initial={{ opacity: 0, x: -10, y: 4 }}
                 animate={{ opacity: 1, x: 0, y: 0 }}
@@ -104,7 +109,9 @@ const LineFollowingRobot = () => {
                 </p>
               </motion.div>
 
+              {/* Text + metrics */}
               <div className="space-y-4">
+                {/* Title + tagline */}
                 <motion.div
                   initial={{ opacity: 0, y: -6 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -122,6 +129,7 @@ const LineFollowingRobot = () => {
                   )}
                 </motion.div>
 
+                {/* Metrics grid */}
                 <motion.div
                   initial={{ opacity: 0, y: 6 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -176,21 +184,22 @@ const LineFollowingRobot = () => {
                     </div>
                   )}
 
-                {segment.registrationDeadline && (
-                  <div className="rounded-2xl border border-red-500/60 bg-black/45 px-3 py-2.5 flex items-start gap-2">
-                    <div className="mt-0.5 flex h-7 w-7 items-center justify-center rounded-xl bg-red-500/10">
-                      <Clock className="h-4 w-4 text-red-500" />
+                  {segment.registrationDeadline && (
+                    <div className="rounded-2xl border border-red-500/40 bg-black/45 px-3 py-2.5 flex items-start gap-2">
+                      <div className="mt-0.5 flex h-7 w-7 items-center justify-center rounded-xl bg-red-500/10">
+                        <Clock className="h-4 w-4 text-red-500" />
+                      </div>
+                      <div className="space-y-0.5">
+                        <p className="text-[11px] uppercase tracking-wide text-neutral-300/70">
+                          Registration Deadline
+                        </p>
+                        <p className="text-sm font-semibold text-red-500">
+                          {segment.registrationDeadline}
+                        </p>
+                      </div>
                     </div>
-                    <div className="space-y-0.5">
-                      <p className="text-[11px] uppercase tracking-wide text-neutral-300/70">
-                        Registration Deadline
-                      </p>
-                      <p className="text-sm font-semibold text-red-500">
-                        {segment.registrationDeadline}
-                      </p>
-                    </div>
-                  </div>
-                )}                </motion.div>
+                  )}
+                </motion.div>
 
                 {/* Action buttons */}
                 <motion.div
@@ -211,42 +220,53 @@ const LineFollowingRobot = () => {
               </div>
             </div>
 
+            {/* Divider */}
+            <motion.div
+              initial={{ scaleX: 0 }}
+              animate={{ scaleX: 1 }}
+              transition={{ delay: 0.28, duration: 0.5 }}
+              className="my-8 h-px origin-left bg-gradient-to-r from-[#F5CB7A]/30 via-[#F5CB7A]/60 to-transparent"
+            />
+
+            {/* Main description */}
             <motion.div
               initial={{ opacity: 0, y: 6 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.22, duration: 0.35 }}
-              className="mt-8 space-y-4"
+              transition={{ delay: 0.32, duration: 0.35 }}
+              className="mb-8 space-y-3"
             >
               <p className="text-neutral-100 text-sm sm:text-base leading-relaxed border-l-4 border-[#1AB7AA] pl-4 py-2 bg-white/5 rounded-md">
                 {segment.detailedDescription}
               </p>
-
-              <p className="text-neutral-300 text-xs sm:text-sm leading-relaxed">
-                {segment.shortDescription}
-              </p>
-
-              {segment.highlights && segment.highlights.length > 0 && (
-                <div className="mt-6 rounded-2xl border border-[#1AB7AA]/35 bg-black/40 px-4 py-4">
-                  <div className="flex items-center gap-2 mb-3">
-                    <Cpu className="h-4 w-4 text-[#1AB7AA]" />
-                    <p className="text-xs font-semibold tracking-wide text-[#CCF5EE] uppercase">
-                      Key Highlights
-                    </p>
-                  </div>
-                  <ul className="space-y-2">
-                    {segment.highlights.map((point, idx) => (
-                      <li
-                        key={idx}
-                        className="flex items-start gap-2 text-xs sm:text-sm text-neutral-200"
-                      >
-                        <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-[#1AB7AA] flex-shrink-0" />
-                        <span>{point}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
             </motion.div>
+
+            {/* Key highlights card */}
+            {segment.highlights && segment.highlights.length > 0 && (
+              <motion.div
+                initial={{ opacity: 0, y: 6 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.36, duration: 0.35 }}
+                className="rounded-2xl border border-[#1AB7AA]/35 bg-black/40 px-4 py-4"
+              >
+                <div className="flex items-center gap-2 mb-3">
+                  <Cpu className="h-4 w-4 text-[#1AB7AA]" />
+                  <p className="text-xs font-semibold tracking-wide text-[#CCF5EE] uppercase">
+                    Key Highlights
+                  </p>
+                </div>
+                <ul className="space-y-2">
+                  {segment.highlights.map((point, idx) => (
+                    <li
+                      key={idx}
+                      className="flex items-start gap-2 text-xs sm:text-sm text-neutral-200"
+                    >
+                      <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-[#1AB7AA] flex-shrink-0" />
+                      <span>{point}</span>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            )}
           </div>
         </motion.div>
 
@@ -312,4 +332,4 @@ const LineFollowingRobot = () => {
   );
 };
 
-export default LineFollowingRobot;
+export default RoboOlympiad;

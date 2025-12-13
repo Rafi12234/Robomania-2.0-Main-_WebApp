@@ -29,7 +29,7 @@ const SEGMENTS_DATA = [
   },
   {
     id: 2,
-    title: "Robo Soccer",
+    title: "Soccer Bot",
     subtitle: "Strategic Gameplay & Autonomous Control",
     description:
       "Join us in the Soccer Bot Challenge, where robotics and soccer meet. Teams will design and program autonomous robots that can kick a ball and score goals. Test your creativity and technical skills while competing to become the ultimate soccer bot champions.",
@@ -39,7 +39,7 @@ const SEGMENTS_DATA = [
   },
   {
     id: 3,
-    title: "CAD Odyssey",
+    title: "Cadyssey",
     subtitle: "3D Modeling & Engineering Design",
     description:
       "In the CAD Design segment, participants will create precise digital models of mechanical or electrical systems using CAD software. Ideal for those who want to sharpen their 3D design skills and gain a deeper understanding of engineering designs in the virtual space.",
@@ -59,7 +59,7 @@ const SEGMENTS_DATA = [
   },
   {
     id: 5,
-    title: "Hackathon",
+    title: "RoboProject Hackathon",
     subtitle: "Code, Innovate & Build Solutions",
     description:
       "The Mini Robotics Hackathon is a fast-paced event where participants will work on building mini robots under tight deadlines. With limited resources and time, this event challenges your problem-solving and quick-thinking abilities.",
@@ -69,23 +69,13 @@ const SEGMENTS_DATA = [
   },
   {
     id: 6,
-    title: "Innovators Arena",
+    title: "Robo Olympiad",
     subtitle: "Project Showcase & Innovation Display",
     description:
-      "The Project Showcase gives participants the chance to display their innovative robotics projects. Whether it's an individual or team effort, this is the platform to showcase your creativity, design skills and problem-solving abilities to a wider audience.",
-    imageUrl: "https://ik.imagekit.io/mekt2pafz/Innovatorsarena.png",
+      "The Robot Olympiad is a knowledge-based competition that focuses on testing your understanding of robotics, automation, and artificial intelligence. It is an individual event designed to measure your analytical thinking, technical knowledge, and problem-solving ability. If you can apply what you know with confidence, the Robot Olympiad is the perfect place to prove your skills.",
+    imageUrl: "https://ik.imagekit.io/mekt2pafz/Robomania%202.0/robo%20olympiad.png?updatedAt=1765578419230",
     
     icon: Trophy,
-  },
-  {
-    id: 7,
-    title: "AD Canvas",
-    subtitle: "Creative Design & Marketing Excellence",
-    description:
-      "The AD Canvas segment is a unique opportunity to explore the intersection of robotics and storytelling. Participants will design creative campaigns that use robotics to attract attention and engage audiences.",
-    imageUrl: "https://ik.imagekit.io/mekt2pafz/ADCanvas.png",
-    
-    icon: Zap,
   },
 ];
 
@@ -1201,7 +1191,7 @@ const Home = () => {
 </section>
 
 
-      {/* Partners Section */}
+      {/* Sponsors Section */}
       <section className="px-4 py-16 md:py-24">
         <div className="mx-auto max-w-7xl">
           <motion.div
@@ -1211,7 +1201,67 @@ const Home = () => {
             transition={{ duration: 1, delay: 0.5 }}
             className="relative"
           >
-            <PartnersShowcase />
+            <div
+              className="relative rounded-2xl md:rounded-3xl border border-amber-500/20 bg-linear-to-br from-amber-950/20 via-black/40 to-amber-900/20 backdrop-blur-md p-4 sm:p-6 md:p-8 lg:p-12 overflow-hidden"
+              style={{
+                boxShadow:
+                  "0 0 40px rgba(251, 191, 36, 0.15), inset 0 1px 0 rgba(251, 191, 36, 0.1)",
+              }}
+            >
+              <div className="absolute inset-0 bg-linear-to-br from-amber-500/5 via-transparent to-amber-600/5 pointer-events-none" />
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="text-center relative z-10 space-y-8 md:space-y-12"
+              >
+                <motion.h2
+                  className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 md:mb-4 bg-linear-to-r from-amber-300 via-amber-400 to-amber-600 bg-clip-text text-transparent"
+                  style={{
+                    textShadow: "0 0 40px rgba(251, 191, 36, 0.3)",
+                    filter: "drop-shadow(0 4px 8px rgba(251, 191, 36, 0.3))",
+                  }}
+                >
+                  Meet Our Valued Sponsors
+                </motion.h2>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                  className="flex flex-col items-center gap-6"
+                >
+                  <motion.div
+                    animate={{ y: [0, -10, 0] }}
+                    transition={{ duration: 2, repeat: Infinity }}
+                    className="text-6xl md:text-7xl lg:text-8xl"
+                  >
+                    🎯
+                  </motion.div>
+
+                  <div className="space-y-4">
+                    <h3 className="text-2xl md:text-3xl font-bold text-amber-300">
+                      Coming Soon!
+                    </h3>
+                    <p className="text-amber-100/80 text-base md:text-lg max-w-2xl mx-auto px-2">
+                      Our valued sponsors will be announced very soon. Stay tuned for exciting partnerships and collaborations that make Robomania 2.0 possible!
+                    </p>
+                  </div>
+
+                  <motion.div
+                    animate={{ opacity: [0.5, 1, 0.5] }}
+                    transition={{ duration: 2, repeat: Infinity }}
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-400/40"
+                  >
+                    <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" />
+                    <span className="text-sm text-amber-300">Updates coming soon</span>
+                  </motion.div>
+                </motion.div>
+              </motion.div>
+            </div>
           </motion.div>
         </div>
       </section>
