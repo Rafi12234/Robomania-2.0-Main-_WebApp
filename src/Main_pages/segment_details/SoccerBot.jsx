@@ -41,8 +41,8 @@ const SoccerBot = () => {
       "Real-time decision-making using sensors, control loops or AI.",
       "Stadium-like experience with cheering zones and live score display.",
     ],
-    schedule: "To be Announced",
-    place: "AUST Campus",
+    schedule: "2:30 - 4:00 PM",
+    place: "TT Ground",
     registrationDeadline: "12 January, 2026",
   };
 

@@ -18,8 +18,8 @@ const segmentsData = [
     badge: "Flagship Arena Event",
     category: "Autonomous Robotics · Game AI",
     image: "https://ik.imagekit.io/mekt2pafz/SoccerBot.png",
-    schedule: "To be Announced",
-    place: "AUST Campus",
+    schedule: "2:30 - 4:00 PM",
+    place: "TT Ground",
     registrationDeadline: "12 January, 2026",
     rulebookLink: "https://tinyurl.com/SoccerBot-Rlbk", // Update this with actual rulebook link
   },
@@ -30,8 +30,8 @@ const segmentsData = [
     badge: "Core Robotics Skill",
     category: "Embedded Systems · Control",
     image: "https://ik.imagekit.io/mekt2pafz/LineFollowingRobot.png",
-    schedule: "To be Announced",
-    place: "AUST Campus",
+    schedule: "10:00 AM - 12:00 PM",
+    place: "Auditorium",
     registrationDeadline: "12 January, 2026",
     rulebookLink: "https://tinyurl.com/LFR-Rulebook", // Update this with actual rulebook link
   },
@@ -42,8 +42,8 @@ const segmentsData = [
     badge: "EEE Showdown",
     category: "Electronics · Circuit Design",
     image: "https://ik.imagekit.io/mekt2pafz/CIRCUITWizardy.png",
-    schedule: "To be Announced",
-    place: "AUST Campus",
+    schedule: "10:30 AM - 12:00 PM",
+    place: "Class Room",
     registrationDeadline: "12 January, 2026",
     rulebookLink: "https://tinyurl.com/Circuit-Wizardry", // Update this with actual rulebook link
   },
@@ -54,8 +54,8 @@ const segmentsData = [
     badge: "Design Studio",
     category: "CAD · Product Design",
     image: "https://ik.imagekit.io/mekt2pafz/Cadyssey.png",
-    schedule: "To be Announced",
-    place: "AUST Campus",
+    schedule: "11:30 AM - 1:00 PM",
+    place: "Class Room",
     registrationDeadline: "12 January, 2026",
     rulebookLink: "https://tinyurl.com/CADyssey", // Update this with actual rulebook link
   },
@@ -66,8 +66,8 @@ const segmentsData = [
     badge: "24-Hour Build Sprint",
     category: "Hackathon · Rapid Prototyping",
     image: "https://ik.imagekit.io/mekt2pafz/RoboProjectHackathon(2).png",
-    schedule: "To be Announced",
-    place: "AUST Campus",
+    schedule: "9:00 AM - 1:00 PM",
+    place: "Class Room",
     registrationDeadline: "12 January, 2026",
     rulebookLink: "https://tinyurl.com/RoboProject-Hackathon", // Update this with actual rulebook link
   },
@@ -79,8 +79,8 @@ const segmentsData = [
     category: "Multi-Event Competition · Team Strategy",
     image:
       "https://ik.imagekit.io/mekt2pafz/Robomania%202.0/robo%20olympiad.png?updatedAt=1765578419230",
-    schedule: "To be Announced",
-    place: "AUST Campus",
+    schedule: "9:00 AM - 10:30 AM",
+    place: "Class Room",
     registrationDeadline: "12 January, 2026",
     prizePool: "To be Announced",
     description:

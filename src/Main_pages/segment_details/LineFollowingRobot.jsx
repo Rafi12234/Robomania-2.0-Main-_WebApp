@@ -42,8 +42,8 @@ const LineFollowingRobot = () => {
       "Focus on sensor tuning, PID control and hardware optimization.",
       "Ideal gateway event for newcomers to robotics.",
     ],
-    schedule: "To be Announced",
-    place: "AUST Campus",
+    schedule: "10:00 AM - 12:00 PM",
+    place: "Auditorium",
     registrationDeadline: "12 January, 2026",
   };
 
