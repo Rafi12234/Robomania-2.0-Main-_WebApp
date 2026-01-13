@@ -69,7 +69,7 @@ const segmentsData = [
     schedule: "9:00 AM - 1:00 PM",
     place: "Class Room",
     registrationDeadline: "12 January, 2026",
-    rulebookLink: "https://tinyurl.com/RoboProject-Hackathon", // Update this with actual rulebook link
+    rulebookLink: "https://drive.google.com/file/d/19DrDUsJZpLBwsz1WjqzFbzT3R95Qy4rk/view?usp=drive_link", // Update this with actual rulebook link
   },
   {
     id: 8,

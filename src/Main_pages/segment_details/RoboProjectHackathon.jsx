@@ -302,7 +302,7 @@ const RoboProjectHackathon = () => {
                   className="mt-6 flex flex-wrap gap-3 sm:gap-4"
                 >
                   <a
-                    href="https://tinyurl.com/RoboProject-Hackathon"
+                    href="https://drive.google.com/file/d/19DrDUsJZpLBwsz1WjqzFbzT3R95Qy4rk/view?usp=drive_link"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex-1 rounded-xl border border-[#D1BA83]/60 bg-black/50 px-4 py-2.5 text-sm font-semibold text-[#D1BA83] hover:bg-[#D1BA83]/10 transition-colors duration-200 flex items-center justify-center gap-2"
@@ -310,19 +310,16 @@ const RoboProjectHackathon = () => {
                     <BookOpen className="h-4 w-4" />
                     Rule Book
                   </a>
-                  <button
+
+                  <a
+                    href={googleFormsLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex-1 rounded-xl bg-gradient-to-r from-[#1AB7AA] to-[#0fa399] px-4 py-2.5 text-sm font-semibold text-white hover:shadow-lg hover:shadow-[#1AB7AA]/50 transition-all duration-200 flex items-center justify-center gap-2"
-                    onClick={() =>
-                      window.open(
-                        googleFormsLink,
-                        "_blank",
-                        "noopener,noreferrer"
-                      )
-                    }
                   >
                     <UserPlus className="h-4 w-4" />
                     Register Now
-                  </button>
+                  </a>
                 </motion.div>
               </div>
             </div>
