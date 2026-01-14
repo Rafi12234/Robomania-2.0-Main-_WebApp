@@ -38,8 +38,8 @@ const RoboOlympiad = () => {
       "Competitive environment with top teams recognized and awarded.",
       "Opportunities for networking with fellow robotics enthusiasts.",
     ],
-    schedule: "To be Announced",
-    place: "AUST Campus",
+    schedule: "9:00 AM - 10:30 AM",
+    place: "Class Room",
     registrationDeadline: "12 January, 2026",
   };
 
