@@ -10,7 +10,9 @@ import {
 import { useNavigate } from "react-router-dom";
 import PartnersShowcase  from "./PartnersShowcase.jsx";
 
+
 import PrevEvents from "./PrevEvents.jsx";
+import WinnersGalleryModal from "../components/WinnersGalleryModal.jsx";
 
 /* -------------------------------------------------------------------------- */
 /*                                SEGMENTS DATA                               */
@@ -219,14 +221,14 @@ const PartnersCarousel = () => {
 
                 {/* Main Card Content */}
                 <div
-                  className="relative bg-gradient-to-br from-slate-900/95 via-slate-950/95 to-slate-900/95 backdrop-blur-2xl rounded-3xl border border-slate-800/50 overflow-hidden"
+                  className="relative bg-linear-to-br from-slate-900/95 via-slate-950/95 to-slate-900/95 backdrop-blur-2xl rounded-3xl border border-slate-800/50 overflow-hidden"
                   style={{
                     boxShadow: `0 0 30px ${currentPartner.glowColor}, 0 0 60px ${currentPartner.glowColor}, inset 0 0 20px rgba(0,0,0,0.5)`,
                   }}
                 >
                   {/* Premium Accents */}
-                  <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-white/5 to-transparent rounded-bl-full" />
-                  <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-tr from-white/5 to-transparent rounded-tr-full" />
+                  <div className="absolute top-0 right-0 w-64 h-64 bg-linear-to-br from-white/5 to-transparent rounded-bl-full" />
+                  <div className="absolute bottom-0 left-0 w-64 h-64 bg-linear-to-tr from-white/5 to-transparent rounded-tr-full" />
 
                   {/* Animated Grid Pattern */}
                   <motion.div
@@ -248,7 +250,7 @@ const PartnersCarousel = () => {
 
                   <div className="relative p-4 sm:p-6 lg:p-12 flex flex-col lg:flex-row items-center gap-6 sm:gap-8 lg:gap-12">
                     {/* Left Section - Logo & Badge */}
-                    <div className="flex-shrink-0 flex flex-col items-center gap-6">
+                    <div className="shrink-0 flex flex-col items-center gap-6">
                       {/* Tier Badge */}
                       <motion.div
                         className={`inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 sm:py-3 rounded-full bg-linear-to-r ${currentPartner.color} shadow-2xl`}
@@ -281,7 +283,7 @@ const PartnersCarousel = () => {
 
                       {/* Partner Logo */}
                       <motion.div
-                        className="relative w-[200px] h-[140px] sm:w-[240px] sm:h-[170px] lg:w-[320px] lg:h-[240px]"
+                        className="relative w-[200px] h-[140px] sm:w-60 sm:h-[170px] lg:w-[320px] lg:h-60"
                         whileHover={{ scale: 1.05 }}
                         transition={{ duration: 0.3 }}
                       >
@@ -297,7 +299,7 @@ const PartnersCarousel = () => {
                           transition={{ duration: 2, repeat: Infinity }}
                         />
 
-                        <div className="absolute inset-0 bg-gradient-to-b from-white/10 to-transparent rounded-2xl" />
+                        <div className="absolute inset-0 bg-linear-to-b from-white/10 to-transparent rounded-2xl" />
                         <img
                           src={currentPartner.imageUrl}
                           alt={currentPartner.tier}
@@ -361,7 +363,7 @@ const PartnersCarousel = () => {
                     </div>
                   </div>
 
-                  <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-slate-950/50 to-transparent pointer-events-none" />
+                  <div className="absolute bottom-0 left-0 right-0 h-32 bg-linear-to-t from-slate-950/50 to-transparent pointer-events-none" />
                 </div>
               </div>
             </motion.div>
@@ -624,7 +626,7 @@ const Carousel3D = ({
                 whileHover={!isCenter ? { scale: transform.scale * 1.05 } : {}}
               >
                 <motion.div
-                  className="relative w-[240px] sm:w-[280px] md:w-[340px] lg:w-[380px] h-[360px] sm:h-[400px] md:h-[480px] lg:h-[520px]"
+                  className="relative w-60 sm:w-[280px] md:w-[340px] lg:w-[380px] h-[360px] sm:h-[400px] md:h-[480px] lg:h-[520px]"
                   style={{ transformStyle: "preserve-3d" }}
                   animate={{ rotateY: isFlipped ? 180 : 0 }}
                   transition={{
@@ -1162,7 +1164,7 @@ const Home = () => {
               inline-flex items-center gap-2
               rounded-full px-6 py-3
               text-sm md:text-base font-semibold
-              bg-gradient-to-r from-[#F5CB7A] via-[#FFE4A3] to-[#FACC6B]
+              bg-linear-to-r from-[#F5CB7A] via-[#FFE4A3] to-[#FACC6B]
               text-black
               border border-amber-400/70
               shadow-[0_10px_30px_rgba(0,0,0,0.7)]
@@ -1253,10 +1255,15 @@ const Home = () => {
           </motion.div>
         </div>
       </section>
+
+      {/* Winners Gallery Button Section */}
+      <div className="flex justify-center my-10">
+        <WinnersGalleryModal />
+      </div>
+
       <div className="mx-auto max-w-6xl  gap-10 rounded-3xl border border-[#554110] p-6 backdrop-blur-md md:flex-row md:p-10">
         <PrevEvents />
       </div>
-      
     </div>
   );
 };

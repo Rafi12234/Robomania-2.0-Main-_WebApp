@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
+
 import {
   ChevronDown,
   BookOpen,
@@ -123,10 +123,10 @@ const SegmentCard = ({ segment, index, onDetails, onRulebook }) => {
         hover:shadow-[0_0_40px_rgba(245,203,122,0.35)]
       "
     >
-      <div className="absolute inset-0 bg-gradient-to-br from-[#050506]/75 via-[#120b05]/80 to-[#1a0f00]/70" />
+      <div className="absolute inset-0 bg-linear-to-br from-[#050506]/75 via-[#120b05]/80 to-[#1a0f00]/70" />
 
       <motion.div
-        className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-t from-[#F5CB7A]/18 via-transparent to-transparent"
+        className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-linear-to-t from-[#F5CB7A]/18 via-transparent to-transparent"
         whileHover={{ opacity: 1 }}
       />
 
@@ -160,7 +160,7 @@ const SegmentCard = ({ segment, index, onDetails, onRulebook }) => {
           whileHover={{ scale: 1.02 }}
           transition={{ duration: 0.15 }}
         >
-          <span className="bg-gradient-to-r from-[#F5CB7A] via-[#FFE4A3] to-[#FACC6B] bg-clip-text text-transparent">
+          <span className="bg-linear-to-r from-[#F5CB7A] via-[#FFE4A3] to-[#FACC6B] bg-clip-text text-transparent">
             {segment.name}
           </span>
         </motion.h3>
@@ -176,7 +176,7 @@ const SegmentCard = ({ segment, index, onDetails, onRulebook }) => {
         <div className="mb-4 space-y-2.5">
           {/* Schedule */}
           <div className="flex items-start gap-2.5 text-xs sm:text-sm">
-            <Calendar className="h-4 w-4 text-[#F5CB7A] flex-shrink-0 mt-0.5" />
+            <Calendar className="h-4 w-4 text-[#F5CB7A] shrink-0 mt-0.5" />
             <div>
               <p className="text-neutral-400 text-[10px] sm:text-xs uppercase tracking-wide">
                 Schedule
@@ -187,7 +187,7 @@ const SegmentCard = ({ segment, index, onDetails, onRulebook }) => {
 
           {/* Place */}
           <div className="flex items-start gap-2.5 text-xs sm:text-sm">
-            <MapPin className="h-4 w-4 text-[#F5bb46] flex-shrink-0 mt-0.5" />
+            <MapPin className="h-4 w-4 text-[#F5bb46] shrink-0 mt-0.5" />
             <div>
               <p className="text-neutral-400 text-[10px] sm:text-xs uppercase tracking-wide">
                 Place
@@ -198,7 +198,7 @@ const SegmentCard = ({ segment, index, onDetails, onRulebook }) => {
 
           {/* Registration Deadline */}
           <div className="flex items-start gap-2.5 text-xs sm:text-sm">
-            <Clock className="h-4 w-4 text-[#FFE4A3] flex-shrink-0 mt-0.5" />
+            <Clock className="h-4 w-4 text-[#FFE4A3] shrink-0 mt-0.5" />
             <div>
               <p className="text-neutral-400 text-[10px] sm:text-xs uppercase tracking-wide">
                 Registration Deadline
@@ -210,7 +210,7 @@ const SegmentCard = ({ segment, index, onDetails, onRulebook }) => {
           </div>
         </div>
 
-        <div className="flex-grow" />
+        <div className="grow" />
 
         {/* Buttons: Details & Rulebook */}
         <div className="mt-4 flex gap-2.5">
@@ -223,7 +223,7 @@ const SegmentCard = ({ segment, index, onDetails, onRulebook }) => {
               flex-1 inline-flex items-center justify-center gap-2
               rounded-full px-3 py-2.5
               text-xs sm:text-sm font-semibold
-              bg-gradient-to-r from-[#3b2a12] via-[#6b4a1c] to-[#3b2a12]
+              bg-linear-to-r from-[#3b2a12] via-[#6b4a1c] to-[#3b2a12]
               text-[#FDF6DF]
               border border-[#F5CB7A]/70
               shadow-[0_8px_25px_rgba(0,0,0,0.7)]
@@ -238,7 +238,7 @@ const SegmentCard = ({ segment, index, onDetails, onRulebook }) => {
               transition={{ duration: 0.25, ease: "easeInOut" }}
               className="flex items-center justify-center h-4 w-4"
             >
-              <ChevronDown className="h-3 w- rotate-[-90deg]" />
+              <ChevronDown className="h-3 w-3 -rotate-90" />
             </motion.span>
           </motion.button>
 
@@ -251,7 +251,7 @@ const SegmentCard = ({ segment, index, onDetails, onRulebook }) => {
                 flex-1 inline-flex items-center justify-center gap-2
                 rounded-full px-3 py-2.5
                 text-xs sm:text-sm font-semibold
-                bg-gradient-to-r from-[#31010b] via-[#3f0202] to-[#31010b]
+                bg-linear-to-r from-[#31010b] via-[#3f0202] to-[#31010b]
                 text-[#e3deca]
                 border border-[#F5bb46]/70
                 shadow-[0_8px_25px_rgba(0,0,0,0.7)]
@@ -269,7 +269,7 @@ const SegmentCard = ({ segment, index, onDetails, onRulebook }) => {
         className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
         whileHover={{ opacity: 1 }}
       >
-        <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-transparent via-[#F5CB7A]/18 to-transparent" />
+        <div className="absolute inset-0 rounded-3xl bg-linear-to-r from-transparent via-[#F5CB7A]/18 to-transparent" />
       </motion.div>
     </motion.div>
   );
@@ -302,9 +302,9 @@ const Segments = () => {
     <section className="px-4 py-10 text-white md:py-16">
       <div className="mx-auto flex max-w-7xl flex-col gap-12">
         {/* PAGE HEADER */}
-        <header className="rounded-3xl border border-[#D1BA83]/40 bg-gradient-to-br from-[#050506]/70 to-[#1a0f00]/30 backdrop-blur-sm p-8 md:p-10 space-y-6 shadow-[0_0_30px_rgba(245,203,122,0.08)]">
-          <div className="inline-flex items-center gap-3 rounded-full border border-[#D1BA83]/70 bg-gradient-to-r from-[#F5CB7A]/10 to-[#F5bb46/10 px-4 py-1 text-[11px] font-semibold uppercase tracking-[0.22em] w-fit">
-            <span className="h-[6px] w-[6px] rounded-full bg-[#F5CB7A] animate-pulse" />
+        <header className="rounded-3xl border border-[#D1BA83]/40 bg-linear-to-br from-[#050506]/70 to-[#1a0f00]/30 backdrop-blur-sm p-8 md:p-10 space-y-6 shadow-[0_0_30px_rgba(245,203,122,0.08)]">
+          <div className="inline-flex items-center gap-3 rounded-full border border-[#D1BA83]/70 bg-linear-to-r from-[#F5CB7A]/10 to-[#F5bb46]/10 px-4 py-1 text-[11px] font-semibold uppercase tracking-[0.22em] w-fit">
+            <span className="h-1.5 w-1.5 rounded-full bg-[#F5CB7A] animate-pulse" />
             Event Segments
           </div>
 
@@ -315,7 +315,7 @@ const Segments = () => {
             className="space-y-3"
           >
             <h1 className="text-4xl md:text-5xl font-bold">
-              <span className="bg-gradient-to-r from-[#F5CB7A] via-[#e69f08] to-[#F5CB7A] bg-clip-text text-transparent">
+              <span className="bg-linear-to-r from-[#F5CB7A] via-[#e69f08] to-[#F5CB7A] bg-clip-text text-transparent">
                 Segments of the Event
               </span>
             </h1>
@@ -362,7 +362,7 @@ const Segments = () => {
               exit={{ scale: 0.9, opacity: 0, y: 20 }}
               transition={{ type: "spring", stiffness: 260, damping: 26 }}
               onClick={(e) => e.stopPropagation()}
-              className="relative rounded-3xl border border-[#D1BA83]/60 bg-gradient-to-br from-[#050506]/95 via-[#0d0902]/95 to-[#1a0f00]/80 shadow-[0_0_70px_rgba(245,203,122,0.28)] p-8 max-w-md w-full text-center"
+              className="relative rounded-3xl border border-[#D1BA83]/60 bg-linear-to-br from-[#050506]/95 via-[#0d0902]/95 to-[#1a0f00]/80 shadow-[0_0_70px_rgba(245,203,122,0.28)] p-8 max-w-md w-full text-center"
             >
               {/* Close button */}
               <button
@@ -377,7 +377,7 @@ const Segments = () => {
                 <motion.div
                   animate={{ y: [0, -10, 0] }}
                   transition={{ duration: 2, repeat: Infinity }}
-                  className="text-5xl font-bold bg-gradient-to-r from-[#F5CB7A] via-[#1AB7AA] to-[#F5CB7A] bg-clip-text text-transparent"
+                  className="text-5xl font-bold bg-linear-to-r from-[#F5CB7A] via-[#1AB7AA] to-[#F5CB7A] bg-clip-text text-transparent"
                 >
                   🎉
                 </motion.div>
@@ -400,7 +400,7 @@ const Segments = () => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={() => setShowComingSoon(false)}
-                  className="mt-6 w-full rounded-xl bg-gradient-to-r from-[#1AB7AA] to-[#0fa399] px-4 py-3 text-sm font-semibold text-white hover:shadow-lg hover:shadow-[#1AB7AA]/50 transition-all duration-200"
+                  className="mt-6 w-full rounded-xl bg-linear-to-r from-[#1AB7AA] to-[#0fa399] px-4 py-3 text-sm font-semibold text-white hover:shadow-lg hover:shadow-[#1AB7AA]/50 transition-all duration-200"
                 >
                   Got it!
                 </motion.button>
