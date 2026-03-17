@@ -1,7 +1,9 @@
 "use client";
 
 import React from "react";
-import { motion } from "motion/react";
+// eslint-disable-next-line no-unused-vars
+import { motion } from "framer-motion";
+
 import { cn } from "@/lib/utils";
 
 export function LampDemo() {
@@ -16,7 +18,7 @@ export function LampDemo() {
           duration: 0.8,
           ease: "easeInOut",
         }}
-        className="mt-8 bg-gradient-to-br from-[#FACC6B] to-[#F5E6C8] py-4 bg-clip-text text-center text-4xl font-semibold tracking-tight text-transparent md:text-7xl"
+        className="mt-8 bg-linear-to-br from-[#FACC6B] to-[#F5E6C8] py-4 bg-clip-text text-center text-4xl font-semibold tracking-tight text-transparent md:text-7xl"
       >
         Contact Us
       </motion.h1>
@@ -51,10 +53,10 @@ export const LampContainer = ({
             backgroundImage: `conic-gradient(var(--conic-position), var(--tw-gradient-stops))`,
             willChange: "transform, opacity",
           }}
-          className="absolute inset-auto right-1/2 h-56 overflow-visible w-[30rem] bg-gradient-conic from-[#22C5A5] via-transparent to-transparent text-white [--conic-position:from_70deg_at_center_top]"
+          className="absolute inset-auto right-1/2 h-56 overflow-visible w-120 bg-gradient-conic from-[#22C5A5] via-transparent to-transparent text-white [--conic-position:from_70deg_at_center_top]"
         >
-          <div className="absolute w-[100%] left-0 bg-[#020617] h-40 bottom-0 z-20 [mask-image:linear-gradient(to_top,white,transparent)]" />
-          <div className="absolute w-40 h-[100%] left-0 bg-[#020617] bottom-0 z-20 [mask-image:linear-gradient(to_right,white,transparent)]" />
+          <div className="absolute w-full left-0 bg-[#020617] h-40 bottom-0 z-20 mask-[linear-gradient(to_top,white,transparent)]" />
+          <div className="absolute w-40 h-full left-0 bg-[#020617] bottom-0 z-20 mask-[linear-gradient(to_right,white,transparent)]" />
         </motion.div>
 
         {/* Right conic glow */}
@@ -71,10 +73,10 @@ export const LampContainer = ({
             backgroundImage: `conic-gradient(var(--conic-position), var(--tw-gradient-stops))`,
             willChange: "transform, opacity",
           }}
-          className="absolute inset-auto left-1/2 h-56 w-[30rem] bg-gradient-conic from-transparent via-transparent to-[#22C5A5] text-white [--conic-position:from_290deg_at_center_top]"
+          className="absolute inset-auto left-1/2 h-56 w-120 bg-gradient-conic from-transparent via-transparent to-[#22C5A5] text-white [--conic-position:from_290deg_at_center_top]"
         >
-          <div className="absolute w-40 h-[100%] right-0 bg-[#020617] bottom-0 z-20 [mask-image:linear-gradient(to_left,white,transparent)]" />
-          <div className="absolute w-[100%] right-0 bg-[#020617] h-40 bottom-0 z-20 [mask-image:linear-gradient(to_top,white,transparent)]" />
+          <div className="absolute w-40 h-full right-0 bg-[#020617] bottom-0 z-20 mask-[linear-gradient(to_left,white,transparent)]" />
+          <div className="absolute w-full right-0 bg-[#020617] h-40 bottom-0 z-20 mask-[linear-gradient(to_top,white,transparent)]" />
         </motion.div>
 
         {/* Dark base under glow */}
@@ -91,7 +93,7 @@ export const LampContainer = ({
 
         {/* Main teal glow */}
         <div
-          className="absolute inset-auto z-50 h-36 w-[28rem] -translate-y-1/2 rounded-full bg-[#22C5A5] opacity-45 blur-2xl"
+          className="absolute inset-auto z-50 h-36 w-md -translate-y-1/2 rounded-full bg-[#22C5A5] opacity-45 blur-2xl"
           style={{ willChange: "transform" }}
         ></div>
 
@@ -106,7 +108,7 @@ export const LampContainer = ({
             ease: "easeOut",
           }}
           style={{ willChange: "transform" }}
-          className="absolute inset-auto z-30 h-36 w-64 -translate-y-[6rem] rounded-full bg-[#FACC6B] blur-xl"
+          className="absolute inset-auto z-30 h-36 w-64 -translate-y-24 rounded-full bg-[#FACC6B] blur-xl"
         ></motion.div>
 
         {/* Top highlight line in gold */}
@@ -120,11 +122,11 @@ export const LampContainer = ({
             ease: "easeOut",
           }}
           style={{ willChange: "transform" }}
-          className="absolute inset-auto z-50 h-0.5 w-[30rem] -translate-y-[7rem] bg-[#FACC6B] origin-center"
+          className="absolute inset-auto z-50 h-0.5 w-120 -translate-y-28 bg-[#FACC6B] origin-center"
         ></motion.div>
 
         {/* Mask to fade lamp into page bg */}
-        <div className="absolute inset-auto z-40 h-44 w-full -translate-y-[12.5rem] bg-[#020617]" />
+        <div className="absolute inset-auto z-40 h-44 w-full -translate-y-50 bg-[#020617]" />
       </div>
 
       {/* Content slot (your “Contact Us” text etc.) */}
